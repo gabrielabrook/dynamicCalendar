@@ -1,0 +1,49 @@
+<html>
+<head>
+	<link rel="stylesheet" href="styles.css">
+	<title>CIS 217 - Dynamic Calendar (P01)</title>
+</head>
+
+<body>
+	<!-- Page Header -->
+	<div>
+		<!-- Page Title -->
+		<h1>CIS 217 - Project #1</h1>
+		<hr><br>
+
+		<!-- Dynamic Calendar -->
+		<h1>Dynamic Calendar</h1>
+
+		<!-- JavaScript -->
+		<script type="text/javascript" src="script.js"></script>
+		
+		<!-- User Input -->
+		<p><i>Please input the MONTH and YEAR you wish to create a calendar for below.</i></p>
+		<form action="" onSubmit="return printCalendar()">
+			<p>Month:
+			<select id="months" name="months">
+				<option value="January">January</option>
+				<option value="February">February</option>
+				<option value="March">March</option>
+				<option value="April">April</option>
+				<option value="May">May</option>
+				<option value="June">June</option>
+				<option value="July">July</option>
+				<option value="August">August</option>
+				<option value="September">September</option>
+				<option value="October">October</option>
+				<option value="November">November</option>
+				<option value="December">December</option>
+			</select>
+			</p>
+			<p>Year:
+			<input type="number" id="year" size="4" maxlength="4" min="1582" max="" required/></p> <!-- 1582 is when the Gregorian calendar was first instituted, with other countries to follow 				later. This calendar only supports the Gregorian calendar model, hence the minimum value. This avoids dealing with the Julian calendar system/version of Zeller's congruence. -->
+			<input type="submit" value="Generate"><br><br>
+		</form>
+	</div>
+
+	<div id="calendar">
+		<!-- Outputs dynamically-structured calendar -->
+	</div>
+</body>
+</html>
